@@ -13,13 +13,13 @@ class Transaction:
 	deduction from wallet is to be paid in cash. 
 	'''
 	user, price = self.ride.user, self.ride.price
-	curren_wallet_money = user.wallet.current_money()
+	current_wallet_money = user.wallet.current_money()
 
-	if curren_wallet_money >= price:
+	if current_wallet_money >= price:
 	    user.wallet.deduct_money(price)
 	    self.paid_by_wallet = price
 	    return
         
-        self.paid_by_wallet = curren_wallet_money
-	user.wallet.deduct_money(curren_wallet_money)
+        self.paid_by_wallet = current_wallet_money
+	user.wallet.deduct_money(current_wallet_money)
 	self.paid_by_cash = price - self.paid_by_wallet
