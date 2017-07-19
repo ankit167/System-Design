@@ -4,6 +4,8 @@ class User(object):
         self.user_name = user_name
         # Indicates whether user is currently travelling or not.
         self.current_ride = None
+        # Each user has a wallet
+        self.wallet = Wallet()
 
     #
     # Accepts source and destination from the user, and calls App API

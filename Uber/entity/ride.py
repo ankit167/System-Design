@@ -14,4 +14,3 @@ class Ride(object):
         self.source = source
         self.destination = destination
         self.price = price
-

@@ -46,6 +46,8 @@ class App(object):
 
     def end_ride(ride):
         ride.ride_state = Ride_State.COMPLETE
+        # Create a new transaction
+        Transaction(ride).end_ride_transaction()
 
     def cancel_ride(ride):
         ride.ride_state = Ride_State.CANCELLED
